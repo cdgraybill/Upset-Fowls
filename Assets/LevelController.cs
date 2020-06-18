@@ -5,6 +5,7 @@ public class LevelController : MonoBehaviour
 {
     private static int _nextLevelIndex = 1;
     private Enemy[] _enemies;
+    private float _time;
 
     private void OnEnable()
     {
@@ -17,6 +18,7 @@ public class LevelController : MonoBehaviour
         foreach(Enemy enemy in _enemies)
         {
             if (enemy != null)
+
                 return;
         }
 
