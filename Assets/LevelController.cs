@@ -22,10 +22,16 @@ public class LevelController : MonoBehaviour
                 return;
         }
 
+        _time += Time.deltaTime;
+
+        if(_time > 3)
+        {
+            _nextLevelIndex++;
+            string nextLevelName = "Level" + _nextLevelIndex;
+            SceneManager.LoadScene(nextLevelName);
+        }
+
         Debug.Log("You killed all enemies");
 
-        _nextLevelIndex++;
-        string nextLevelName = "Level" + _nextLevelIndex;
-        SceneManager.LoadScene(nextLevelName);
     }
 }
